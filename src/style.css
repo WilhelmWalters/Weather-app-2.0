@@ -1,0 +1,34 @@
+.mainContents {
+  max-width: 500px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.mainContents .border {
+  border-radius: 5px;
+}
+.cityName {
+  text-align: left;
+}
+.dayDescription li {
+  text-align: left;
+  list-style-type: none;
+}
+.temperatureAndEmoji {
+  margin-left: 3px;
+  text-align: left;
+  padding: 0;
+  vertical-align: top;
+}
+.weatherEmoji {
+  font-size: 25px;
+}
+.weatherDescription {
+  list-style-type: none;
+  text-align: left;
+}
+.temperatureConverter {
+  font-size: x-small;
+  vertical-align: top;
+}

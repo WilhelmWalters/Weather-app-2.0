@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Week 7 project</title>
+  </head>
+  <body class="mainContents">
+    <div class="border">
+      <div class="container">
+        <div class="row">
+          <ul class="dayDescription">
+            <li>
+              <h1 class="cityName" id="city-name">City name</h1>
+            </li>
+            <li>Day and time</li>
+            <li>description</li>
+          </ul>
+          <div class="col-6">
+            <div class="row temperatureAndEmoji">
+              <h2>
+                <span class="weatherEmoji">🌍</span>
+                <span class="bigTemperature">Temp</span>
+                <span class="temperatureConverter">
+                  <a href="#" class="cConverter">°C</a
+                  ><span class="converterPartition"> | </span
+                  ><a href="#" class="fConverter">°F</a></span
+                >
+              </h2>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <ul class="weatherDescription">
+              <li>Precipitation</li>
+              <li>Humidity</li>
+              <li>Wind</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <form id="input-bar">
+        <input type="text" placeholder="Enter city name" id="bar-input" />
+      </form>
+      <small
+        >Open-spource code, made by
+        <a
+          href="https://github.com/WilhelmWalters"
+          target="_blank"
+          rel="noopener"
+          >WilhelmWalters</a
+        ></small
+      >
+    </div>
+
+    <script src="src/script.js"></script>
+  </body>
+</html>
