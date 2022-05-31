@@ -1,19 +1,28 @@
+a {
+  color: #527382;
+}
 .mainContents {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   max-width: 500px;
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 50px auto;
   text-align: center;
 }
 .mainContents .border {
   border-radius: 5px;
 }
 .cityName {
+  color: #080c0e;
+  font-size: 52px;
+  font-weight: 200;
   text-align: left;
 }
 .dayDescription li {
   text-align: left;
   list-style-type: none;
+}
+.firstList {
+  color: #5e5d5d;
+  padding-left: 1px;
 }
 .temperatureAndEmoji {
   margin-left: 3px;
@@ -25,8 +34,13 @@
   font-size: 25px;
 }
 .weatherDescription {
+  color: #707070;
   list-style-type: none;
   text-align: left;
+}
+.bigTemperature {
+  color: #507a8e;
+  text-shadow: #527382, 0 1px 3px;
 }
 .temperatureConverter {
   font-size: x-small;
