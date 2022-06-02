@@ -5,7 +5,11 @@ function presentData(response) {
   let name = document.querySelector("#city-name");
   name.innerHTML = response.data.name;
   let description = document.querySelector(`#weather-description`);
-  description.innerHTML = response.data.weather[0].main;
+  description.innerHTML = response.data.weather[0].description;
+  let humidity = document.querySelector(`#humidity`);
+  humidity.innerHTML = `${response.data.main.humidity}% Humidity`;
+  let wind = document.querySelector(`#wind-speed`);
+  wind.innerHTML = `${response.data.wind.speed} km/h Wind Speed`;
 }
 
 let apiKey = "489055a913f2ed412a9598a039efc966";

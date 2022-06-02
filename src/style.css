@@ -22,6 +22,9 @@ a {
   list-style-type: none;
   line-height: 23px;
 }
+.description {
+  text-transform: capitalize;
+}
 .firstList {
   color: #5e5d5d;
   padding-left: 1px;
