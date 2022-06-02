@@ -4,6 +4,8 @@ function presentData(response) {
   temperature.innerHTML = Math.round(response.data.main.temp);
   let name = document.querySelector("#city-name");
   name.innerHTML = response.data.name;
+  let description = document.querySelector(`#weather-description`);
+  description.innerHTML = response.data.weather[0].main;
 }
 
 let apiKey = "489055a913f2ed412a9598a039efc966";
