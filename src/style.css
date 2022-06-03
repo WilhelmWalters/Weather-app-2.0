@@ -36,7 +36,11 @@ a {
   vertical-align: top;
 }
 .weatherEmoji {
-  font-size: 25px;
+  display: inline-block;
+  height: 60px;
+  margin-top: unset;
+  vertical-align: top;
+  width: 60px;
 }
 .weatherDescription {
   color: #707070;
@@ -46,7 +50,13 @@ a {
 }
 .bigTemperature {
   color: #507a8e;
+  font-size: 23px;
   text-shadow: #527382, 0 1px 3px;
+  display: inline-block;
+  height: 60px;
+  margin-top: unset;
+  vertical-align: top;
+  width: 60px;
 }
 .temperatureConverter {
   font-size: x-small;

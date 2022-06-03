@@ -28,16 +28,22 @@
             </li>
           </ul>
           <div class="col-6">
-            <div class="row temperatureAndEmoji">
-              <h2>
-                <span class="weatherEmoji">🌍</span>
-                <span class="bigTemperature" id="temperature">Temp</span>
-                <span class="temperatureConverter">
-                  <a href="#" class="cConverter">°C</a
-                  ><span class="converterPartition"> | </span
-                  ><a href="#" class="fConverter">°F</a></span
-                >
-              </h2>
+            <div class="row">
+              <div class="temperatureAndEmoji">
+                <img
+                  class="clearfix weatherEmoji"
+                  src="http://openweathermap.org/img/wn/10d@2x.png"
+                  alt="Conditions specific weather icon"
+                />
+                <div class="float-left bigTemperature" id="temperature">
+                  Temp
+                </div>
+                <span class="float-left temperatureConverter">
+                  <a href="#" class="float-left cConverter">°C</a>
+                  <span class="float-left converterPartition">|</span>
+                  <a href="#" class="float-left fConverter">°F</a>
+                </span>
+              </div>
             </div>
           </div>
 
