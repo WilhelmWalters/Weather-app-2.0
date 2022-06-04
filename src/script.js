@@ -37,6 +37,14 @@ function presentData(response) {
   wind.innerHTML = `${response.data.wind.speed} km/h Wind Speed`;
   let date = document.querySelector(`#date`);
   date.innerHTML = displayDate(response.data.dt * 1000);
+  let iconElement = document.querySelector(`#icon`);
+  let icon = response.data.weather[0].icon;
+  console.log(icon);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 let inputBar = document.querySelector("#input-bar");

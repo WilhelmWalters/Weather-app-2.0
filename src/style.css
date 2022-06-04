@@ -28,7 +28,7 @@ h1 {
   margin: 0%;
   padding: 0%;
 }
-.description {
+.description:first-letter {
   text-transform: capitalize;
 }
 .firstList {
