@@ -23,8 +23,11 @@ function displayDate(timestamp) {
   return `Updated on: ${day} ${hours}:${minutes}`;
 }
 
+let celciusTemperature = null;
+
 function presentData(response) {
   console.log(response.data);
+  celciusTemperature = response.data.main.temp;
   let temperature = document.querySelector("#temperature");
   temperature.innerHTML = Math.round(response.data.main.temp);
   let name = document.querySelector("#city-name");
@@ -63,4 +66,16 @@ function generateForecast(event) {
   } else {
     alert("City not recognised :(");
   }
+}
+
+let farenheit = document.querySelector("#f-converter");
+farenheit.addEventListener("click", convertToF);
+let celcius = document.querySelector("#c-converter");
+celcius.addEventListener("click", convertToC);
+
+function convertToF(event) {
+  event.preventDefault();
+  let farenheitDegrees = (celciusTemperature * 9) / 5 + 32;
+  let displayTemperature = document.querySelector("#temperature");
+  displayTemperature.innerHTML = Math.round(farenheitDegrees);
 }
