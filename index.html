@@ -18,20 +18,22 @@
     <div class="border">
       <div class="container">
         <div class="row">
-          <ul class="dayDescription">
-            <li>
-              <h1 class="cityName" id="city-name">City name</h1>
-            </li>
-            <li class="firstList" id="date">Day and time</li>
-            <li class="firstList description" id="weather-description">
-              Description
-            </li>
-          </ul>
-          <div class="col-6">
-            <div class="row">
-              <div class="temperatureAndEmoji">
+          <div class="overview">
+            <ul class="dayDescription">
+              <li>
+                <h1 class="cityName" id="city-name">City name</h1>
+              </li>
+              <li class="firstList" id="date">Day and time</li>
+              <li class="firstList description" id="weather-description">
+                Description
+              </li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix temperatureAndEmoji">
                 <img
-                  class="clearfix weatherEmoji"
+                  class="float-left weatherEmoji"
                   src="http://openweathermap.org/img/wn/10d@2x.png"
                   alt="Conditions specific weather icon"
                 />
@@ -45,14 +47,14 @@
                 </span>
               </div>
             </div>
-          </div>
 
-          <div class="col-6">
-            <ul class="weatherDescription">
-              <li>Precipitation</li>
-              <li id="humidity">Humidity</li>
-              <li id="wind-speed">Wind</li>
-            </ul>
+            <div class="col-6">
+              <ul class="weatherDescription">
+                <li>Precipitation</li>
+                <li id="humidity">Humidity</li>
+                <li id="wind-speed">Wind</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

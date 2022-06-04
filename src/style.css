@@ -1,8 +1,12 @@
 a {
   color: #527382;
 }
+h1 {
+  margin-bottom: 0%;
+}
 .mainContents {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 24;
   max-width: 500px;
   margin: 50px auto;
   text-align: center;
@@ -21,24 +25,31 @@ a {
   text-align: left;
   list-style-type: none;
   line-height: 23px;
+  margin: 0%;
+  padding: 0%;
 }
 .description {
   text-transform: capitalize;
 }
 .firstList {
   color: #5e5d5d;
+  height: 18px;
   padding-left: 1px;
 }
+.overview {
+  margin: 0 auto 10px auto;
+  padding: 0;
+}
 .temperatureAndEmoji {
-  margin-left: 3px;
+  margin: 0 auto 10px auto;
   text-align: left;
   padding: 0;
-  vertical-align: top;
+  line-height: 1;
 }
 .weatherEmoji {
-  display: inline-block;
-  height: 60px;
-  margin-top: unset;
+  font-size: 50px;
+  height: 50px;
+  margin: 0 auto 10px auto;
   vertical-align: top;
   width: 60px;
 }
@@ -50,16 +61,19 @@ a {
 }
 .bigTemperature {
   color: #507a8e;
-  font-size: 23px;
+  display: inline;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0 auto 10px auto;
+  text-align: left;
   text-shadow: #527382, 0 1px 3px;
-  display: inline-block;
-  height: 60px;
-  margin-top: unset;
   vertical-align: top;
   width: 60px;
 }
 .temperatureConverter {
   font-size: x-small;
+  line-height: 1;
   vertical-align: top;
 }
 .inputBar {
