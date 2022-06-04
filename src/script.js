@@ -20,7 +20,7 @@ function displayDate(timestamp) {
     "Saturday",
   ];
   let day = days[date.getDay()];
-  return `${day} ${hours}:${minutes}`;
+  return `Updated on: ${day} ${hours}:${minutes}`;
 }
 
 function presentData(response) {
@@ -39,9 +39,20 @@ function presentData(response) {
   date.innerHTML = displayDate(response.data.dt * 1000);
 }
 
-let apiKey = "489055a913f2ed412a9598a039efc966";
-let searchedName = `New York`;
-let units = `metric`;
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchedName}&appid=${apiKey}&units=${units}`;
-
-axios.get(apiUrl).then(presentData);
+let inputBar = document.querySelector("#input-bar");
+inputBar.addEventListener("submit", generateForecast);
+function generateForecast(event) {
+  event.preventDefault();
+  let location = document.querySelector("#bar-input");
+  if (location.value !== undefined) {
+    let locationInput = location.value;
+    locationInput = locationInput.toLowerCase();
+    let apiKey = "489055a913f2ed412a9598a039efc966";
+    let units = `metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${location.value}&appid=${apiKey}&units=${units}`;
+    console.log(apiUrl);
+    axios.get(apiUrl).then(presentData);
+  } else {
+    alert("City not recognised :(");
+  }
+}
