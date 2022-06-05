@@ -73,6 +73,8 @@ celsius.addEventListener("click", convertToC);
 
 function convertToF(event) {
   event.preventDefault();
+  celsius.classList.remove("active");
+  fahrenheit.classList.add("active");
   let fahrenheitDegrees = (celsiusTemperature * 9) / 5 + 32;
   let displayTemperature = document.querySelector("#temperature");
   displayTemperature.innerHTML = Math.round(fahrenheitDegrees);
@@ -80,6 +82,8 @@ function convertToF(event) {
 
 function convertToC(event) {
   event.preventDefault();
+  fahrenheit.classList.remove("active");
+  celsius.classList.add("active");
   let temperature = document.querySelector("#temperature");
   temperature.innerHTML = Math.round(celsiusTemperature);
 }

@@ -53,6 +53,7 @@ h1 {
 .temperatureAndEmoji {
   margin: 0 auto 10px auto;
   text-align: left;
+  text-decoration: none;
   padding: 0;
   line-height: 1;
 }
