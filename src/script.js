@@ -52,20 +52,18 @@ function presentData(response) {
 
 let inputBar = document.querySelector("#input-bar");
 inputBar.addEventListener("submit", generateForecast);
+
 function generateForecast(event) {
   event.preventDefault();
   let location = document.querySelector("#bar-input");
-  if (location.value !== undefined) {
-    let locationInput = location.value;
-    locationInput = locationInput.toLowerCase();
-    let apiKey = "489055a913f2ed412a9598a039efc966";
-    let units = `metric`;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${location.value}&appid=${apiKey}&units=${units}`;
-    console.log(apiUrl);
-    axios.get(apiUrl).then(presentData);
-  } else {
-    alert("City not recognised :(");
-  }
+  search(location.value);
+}
+function search(city) {
+  let apiKey = "489055a913f2ed412a9598a039efc966";
+  let units = `metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(presentData);
 }
 
 let fahrenheit = document.querySelector("#f-converter");
@@ -85,3 +83,5 @@ function convertToC(event) {
   let temperature = document.querySelector("#temperature");
   temperature.innerHTML = Math.round(celsiusTemperature);
 }
+
+search("London");
