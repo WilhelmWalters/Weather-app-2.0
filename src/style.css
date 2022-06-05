@@ -4,6 +4,16 @@ a {
 h1 {
   margin-bottom: 0%;
 }
+
+.temperatureAndEmoji .active {
+  color: #507a8e;
+  cursor: default;
+  text-decoration: none;
+}
+
+.temperatureAndEmoji .active:hover {
+  text-decoration: none;
+}
 .mainContents {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 24;
