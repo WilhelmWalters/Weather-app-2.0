@@ -29,7 +29,7 @@ function presentData(response) {
   console.log(response.data);
   celciusTemperature = response.data.main.temp;
   let temperature = document.querySelector("#temperature");
-  temperature.innerHTML = Math.round(response.data.main.temp);
+  temperature.innerHTML = Math.round(celciusTemperature);
   let name = document.querySelector("#city-name");
   name.innerHTML = response.data.name;
   let description = document.querySelector(`#weather-description`);
@@ -78,4 +78,10 @@ function convertToF(event) {
   let farenheitDegrees = (celciusTemperature * 9) / 5 + 32;
   let displayTemperature = document.querySelector("#temperature");
   displayTemperature.innerHTML = Math.round(farenheitDegrees);
+}
+
+function convertToC(event) {
+  event.preventDefault();
+  let temperature = document.querySelector("#temperature");
+  temperature.innerHTML = Math.round(celciusTemperature);
 }
