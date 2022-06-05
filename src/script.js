@@ -23,13 +23,13 @@ function displayDate(timestamp) {
   return `Updated on: ${day} ${hours}:${minutes}`;
 }
 
-let celciusTemperature = null;
+let celsiusTemperature = null;
 
 function presentData(response) {
   console.log(response.data);
-  celciusTemperature = response.data.main.temp;
+  celsiusTemperature = response.data.main.temp;
   let temperature = document.querySelector("#temperature");
-  temperature.innerHTML = Math.round(celciusTemperature);
+  temperature.innerHTML = Math.round(celsiusTemperature);
   let name = document.querySelector("#city-name");
   name.innerHTML = response.data.name;
   let description = document.querySelector(`#weather-description`);
@@ -68,20 +68,20 @@ function generateForecast(event) {
   }
 }
 
-let farenheit = document.querySelector("#f-converter");
-farenheit.addEventListener("click", convertToF);
-let celcius = document.querySelector("#c-converter");
-celcius.addEventListener("click", convertToC);
+let fahrenheit = document.querySelector("#f-converter");
+fahrenheit.addEventListener("click", convertToF);
+let celsius = document.querySelector("#c-converter");
+celsius.addEventListener("click", convertToC);
 
 function convertToF(event) {
   event.preventDefault();
-  let farenheitDegrees = (celciusTemperature * 9) / 5 + 32;
+  let fahrenheitDegrees = (celsiusTemperature * 9) / 5 + 32;
   let displayTemperature = document.querySelector("#temperature");
-  displayTemperature.innerHTML = Math.round(farenheitDegrees);
+  displayTemperature.innerHTML = Math.round(fahrenheitDegrees);
 }
 
 function convertToC(event) {
   event.preventDefault();
   let temperature = document.querySelector("#temperature");
-  temperature.innerHTML = Math.round(celciusTemperature);
+  temperature.innerHTML = Math.round(celsiusTemperature);
 }
