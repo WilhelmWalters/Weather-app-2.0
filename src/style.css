@@ -23,6 +23,7 @@ h1 {
 }
 .mainContents .border {
   border-radius: 5px;
+  margin-bottom: 15px;
 }
 .cityName {
   color: #080c0e;
@@ -86,6 +87,16 @@ h1 {
   font-size: x-small;
   line-height: 1;
   vertical-align: top;
+}
+.weather-forecast {
+  margin-bottom: 10px;
+  margin-top: 15px;
+  text-align: center;
+}
+.weather-forecast-date {
+  color: #080c0e;
+  font-weight: 500;
+  opacity: 60%;
 }
 .inputBar {
   padding-bottom: 8px;
