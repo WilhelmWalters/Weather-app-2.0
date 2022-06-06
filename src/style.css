@@ -101,3 +101,9 @@ h1 {
 .inputBar {
   padding-bottom: 8px;
 }
+.forecast-temperatures {
+  font-size: 13px;
+}
+.forecast-minimum {
+  opacity: 50%;
+}
