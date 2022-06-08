@@ -48,6 +48,18 @@ function presentData(response) {
     `http://openweathermap.org/img/wn/${icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
+}
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let lat = coordinates.lat;
+  let lon = coordinates.lon;
+  let apiKey = "489055a913f2ed412a9598a039efc966";
+  let units = `metric`;
+  let apiCoordUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}}&appid=${apiKey}&units=${units}`;
+  console.log(apiCoordUrl);
 }
 
 let inputBar = document.querySelector("#input-bar");
