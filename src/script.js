@@ -45,7 +45,7 @@ function presentData(response) {
   console.log(icon);
   iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${icon}@2x.png`
+    `https://openweathermap.org/img/wn/${icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
@@ -64,8 +64,11 @@ function getForecast(coordinates) {
 
 function displayForecast() {
   let forecastElement = document.querySelector("#weather-forecast");
-  forecastElement.innerHTML = `<div class="row">
-    <div class="col-3">
+
+  let forecastHTML = `<div class="row">`;
+  forecastHTML =
+    forecastHTML +
+    `<div class="col-3">
       <div class="weather-forecast-date">Day</div>
       <img
         src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
@@ -83,6 +86,7 @@ function displayForecast() {
       </div>
     </div>
   </div>;`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 let inputBar = document.querySelector("#input-bar");
