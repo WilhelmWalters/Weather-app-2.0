@@ -86,6 +86,28 @@ function displayForecast() {
       </div>
     </div>
   </div>;`;
+
+  forecastHTML =
+    forecastHTML +
+    `<div class="col-3">
+      <div class="weather-forecast-date">Day</div>
+      <img
+        src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+        alt="Cloudy img"
+      />
+      <div class="forecast-temperatures">
+        <span class="forecast-maximum">
+          18 <a href="#"> °C</a> <span>|</span>
+          <a href="#"> °F</a>
+        </span>
+        <span class="forecast-minimum">
+          12 <a href="#"> °C</a> <span>|</span>
+          <a href="#">°F</a>
+        </span>
+      </div>
+    </div>
+  </div>;`;
+  forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
 
