@@ -64,24 +64,27 @@ function getForecast(coordinates) {
 function displayForecast(response) {
   console.log(response.data.daily);
   let forecastElement = document.querySelector("#weather-forecast");
+
+  let forecast = response.data.daily;
+
   let forecastHTML = `<div class="row">`;
-  let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
-  days.forEach(function (day) {
+
+  forecast.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
       `<div class="col-2">
-      <div class="weather-forecast-date">${day}</div>
+      <div class="weather-forecast-date">${forecastDay.dt}</div>
       <img
         src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
         alt="Cloudy img"
       />
       <div class="forecast-temperatures">
         <span class="forecast-maximum">
-          18 <a href="#"> °C</a> <span>|</span>
+          ${forecastDay.temp.max} <a href="#"> °C</a> <span>|</span>
           <a href="#"> °F</a>
         </span>
         <span class="forecast-minimum">
-          12 <a href="#"> °C</a> <span>|</span>
+          ${forecastDay.temp.min} <a href="#"> °C</a> <span>|</span>
           <a href="#">°F</a>
         </span>
       </div>
