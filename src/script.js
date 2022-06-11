@@ -61,6 +61,12 @@ function getForecast(coordinates) {
   axios.get(apiCoordUrl).then(displayForecast);
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  return day;
+}
+
 function displayForecast(response) {
   console.log(response.data.daily);
   let forecastElement = document.querySelector("#weather-forecast");
@@ -73,10 +79,12 @@ function displayForecast(response) {
     forecastHTML =
       forecastHTML +
       `<div class="col-2">
-      <div class="weather-forecast-date">${forecastDay.dt}</div>
+      <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
       <img
-        src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-        alt="Cloudy img"
+        src="https://openweathermap.org/img/wn/${
+          forecastDay.weather[0].icon
+        }@2x.png"
+        alt="Weather img"
       />
       <div class="forecast-temperatures">
         <span class="forecast-maximum">
