@@ -37,7 +37,7 @@ function presentData(response) {
   let humidity = document.querySelector(`#humidity`);
   humidity.innerHTML = `${response.data.main.humidity}% Humidity`;
   let wind = document.querySelector(`#wind-speed`);
-  wind.innerHTML = `${response.data.wind.speed} km/h Wind Speed`;
+  wind.innerHTML = `${Math.round(response.data.wind.speed)} m/h Wind Speed`;
   let date = document.querySelector(`#date`);
   date.innerHTML = displayDate(response.data.dt * 1000);
   let iconElement = document.querySelector(`#icon`);
@@ -91,12 +91,11 @@ function displayForecast(response) {
       />
       <div class="forecast-temperatures">
         <span class="forecast-maximum">
-          ${Math.round(forecastDay.temp.max)} <a href="#"> °C</a> <span>|</span>
-          <a href="#"> °F</a>
+          ${Math.round(forecastDay.temp.max)}  °C 
+          
         </span>
         <span class="forecast-minimum">
-          ${Math.round(forecastDay.temp.min)} <a href="#"> °C</a> <span>|</span>
-          <a href="#">°F</a>
+          ${Math.round(forecastDay.temp.min)} °C 
         </span>
       </div>
     </div>
