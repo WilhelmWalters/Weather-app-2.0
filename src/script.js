@@ -116,27 +116,4 @@ function search(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(presentData);
 }
-
-let fahrenheit = document.querySelector("#f-converter");
-fahrenheit.addEventListener("click", convertToF);
-let celsius = document.querySelector("#c-converter");
-celsius.addEventListener("click", convertToC);
-
-function convertToF(event) {
-  event.preventDefault();
-  celsius.classList.remove("active");
-  fahrenheit.classList.add("active");
-  let fahrenheitDegrees = (celsiusTemperature * 9) / 5 + 32;
-  let displayTemperature = document.querySelector("#temperature");
-  displayTemperature.innerHTML = Math.round(fahrenheitDegrees);
-}
-
-function convertToC(event) {
-  event.preventDefault();
-  fahrenheit.classList.remove("active");
-  celsius.classList.add("active");
-  let temperature = document.querySelector("#temperature");
-  temperature.innerHTML = Math.round(celsiusTemperature);
-}
-
 search("London");
